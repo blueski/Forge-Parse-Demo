@@ -1,29 +1,29 @@
 {
-	"name": "Parse Demo",
-	"author": "Trigger",
-	"url" : "http://trigger.io",
-	"version": "1.1",
-	"platform_version": "v1.2",
-	"description": "Basic photo stream app to demo Parse integration",
-	"permissions": [ ],
-	"background_files": [ ],
-	"activations": [],
-	"browser_action": {},
-	"logging": {
-		"level": "DEBUG"
-	},
-	"package_names": {
-		"ios": "io.trigger.forge.eventstream"
-	},
-	"orientation": {
-		"default": "any",
-        "iphone": "portrait",
-        "android": "portrait"
-    },
-	"partners": {
-        "parse": {
-            "applicationId": "ggJShmbAJh7YTgviK3fpH4QdIIp9az6WMW03swf5",
-            "clientKey": "Bqjru0vC610FCIl5isczzxjPlv5CsFe8uK0yztez"
-        }
+  "name": "Parse Demo",
+  "author": "Trigger",
+  "url": "http://trigger.io",
+  "version": "1.1",
+  "platform_version": "v1.2",
+  "description": "Basic photo stream app to demo Parse integration",
+  "permissions": [],
+  "background_files": [],
+  "activations": [],
+  "browser_action": {},
+  "logging": {
+    "level": "DEBUG"
+  },
+  "package_names": {
+    "ios": "io.trigger.forge.eventstream"
+  },
+  "orientation": {
+    "default": "any",
+    "iphone": "portrait",
+    "android": "portrait"
+  },
+  "partners": {
+    "parse": {
+      "applicationId": "ggJShmbAJh7YTgviK3fpH4QdIIp9az6WMW03swf5",
+      "clientKey": "Bqjru0vC610FCIl5isczzxjPlv5CsFe8uK0yztez"
     }
+  }
 }
