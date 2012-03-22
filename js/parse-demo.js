@@ -18,12 +18,12 @@ var capturePhoto = function() {
 // Step 2: Upload the image file to Parse
 var uploadPhotoFile = function(file) {
   forge.request.ajax({
-    url: "https://api.parse.com/1/files/" + (new Date()).getTime() + ".jpg",
+    url: 'https://api.parse.com/1/files/' + (new Date()).getTime() + '.jpg',
     headers: {
-      "X-Parse-Application-Id": config.parseAppId,
-      "X-Parse-REST-API-Key": config.parseRestKey
+      'X-Parse-Application-Id': config.parseAppId,
+      'X-Parse-REST-API-Key': config.parseRestKey
     },
-    type: "POST",
+    type: 'POST',
     files: [file],
     fileUploadMethod: 'raw',
     dataType: 'json',
@@ -32,7 +32,7 @@ var uploadPhotoFile = function(file) {
       uploadPhotoMetadata(data);
     },
     error: function () {
-      alert("Problem uploading the photo");
+      alert('Problem uploading the photo');
     }
   });
 };
@@ -40,17 +40,17 @@ var uploadPhotoFile = function(file) {
 // Step 3: Upload image metadata to Parse
 var uploadPhotoMetadata = function(data) {
   forge.request.ajax({
-    url: "https://api.parse.com/1/classes/Photo",
+    url: 'https://api.parse.com/1/classes/Photo',
     headers: {
-      "X-Parse-Application-Id": config.parseAppId,
-      "X-Parse-REST-API-Key": config.parseRestKey
+      'X-Parse-Application-Id': config.parseAppId,
+      'X-Parse-REST-API-Key': config.parseRestKey
     },
-    type: "POST",
-    contentType: "application/json",
+    type: 'POST',
+    contentType: 'application/json',
     dataType: 'json',
     data: JSON.stringify({
       file: {
-        "__type": "File",
+        '__type': 'File',
         name: data.name
       },
       stream: config.streamName
@@ -59,7 +59,7 @@ var uploadPhotoMetadata = function(data) {
       // Upload complete - do nothing
     },
     error: function () {
-      alert("Problem uploading the metadata");
+      alert('Problem uploading the metadata');
     }
   });
 };
@@ -67,16 +67,16 @@ var uploadPhotoMetadata = function(data) {
 // Get images from Parse
 var getPhotos = function() {
   forge.request.ajax({
-    url: "https://api.parse.com/1/classes/Photo",
+    url: 'https://api.parse.com/1/classes/Photo',
     headers: {
-      "X-Parse-Application-Id": config.parseAppId,
-      "X-Parse-REST-API-Key": config.parseRestKey
+      'X-Parse-Application-Id': config.parseAppId,
+      'X-Parse-REST-API-Key': config.parseRestKey
     },
-    type: "GET",
+    type: 'GET',
     dataType: 'json',
     data: {
-      "where": '{"stream": "' + config.streamName + '"}',
-      "order": "-createdAt"
+      'where': '{"stream": "' + config.streamName + '"}',
+      'order': '-createdAt'
     },
     success: function (data) {
       $('#photo-container').children().remove();
@@ -90,7 +90,7 @@ var getPhotos = function() {
   });
 };
 
-// Setup "sensible" click/touch handling
+// Setup 'sensible' click/touch handling
 var clickEvent = 'ontouchend' in document.documentElement ? 'tap' : 'click';
 if (clickEvent == 'tap') {
   var currentTap = true;
@@ -113,6 +113,6 @@ $(document).ready(function() {
   $('#upload-photo').bind(clickEvent, capturePhoto);
   getPhotos();
   forge.event.messagePushed.addListener(function (msg) {
-      alert(msg.alert);
+    alert(msg.alert);
   });
 });
