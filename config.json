@@ -1,0 +1,29 @@
+{
+	"name": "Parse Demo",
+	"author": "Trigger",
+	"url" : "http://trigger.io",
+	"version": "1.1",
+	"platform_version": "v1.2",
+	"description": "Basic photo stream app to demo Parse integration",
+	"permissions": [ ],
+	"background_files": [ ],
+	"activations": [],
+	"browser_action": {},
+	"logging": {
+		"level": "DEBUG"
+	},
+	"package_names": {
+		"ios": "io.trigger.forge.eventstream"
+	},
+	"orientation": {
+		"default": "any",
+        "iphone": "portrait",
+        "android": "portrait"
+    },
+	"partners": {
+        "parse": {
+            "applicationId": "QD9yEg6rZdAtirdSn02QQDFJp57pDnLfmwHqP4xa",
+            "clientKey": "9xCEwy6NofiU2HfEyZBG5y7o62doJBVnHlOfHbYh"
+        }
+    }
+}
