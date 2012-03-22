@@ -8,10 +8,10 @@ var config = {
 // Step 1: Capture an image
 var capturePhoto = function() {
   forge.file.getImage({width: 500, height: 500}, function (file) {
-  	forge.file.imageURL(file, function (url) {
+    forge.file.imageURL(file, function (url) {
       $('#photo-container').prepend($('<img>').attr('src', url));
-  	});
-	  uploadPhotoFile(file);
+    });
+    uploadPhotoFile(file);
   });
 };
 
