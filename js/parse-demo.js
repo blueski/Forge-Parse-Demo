@@ -80,8 +80,8 @@ var getPhotos = function() {
     },
     success: function (data) {
       $('#photo-container').children().remove();
-      data.results.forEach(function (file) {
-        $('#photo-container').append($('<img>').attr('src', file.file.url));
+      data.results.forEach(function (photo) {
+        $('#photo-container').append($('<img>').attr('src', photo.file.url));
       })
     },
     error: function () {
