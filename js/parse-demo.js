@@ -1,7 +1,7 @@
 // Constants used for configuration
 var config = {
-  parseAppId: 'QD9yEg6rZdAtirdSn02QQDFJp57pDnLfmwHqP4xa',
-  parseRestKey: 'ZstsmIqn3BoShHopKGTSVdOPv7TrNk1NrjQjnb1P',
+  parseAppId: 'ggJShmbAJh7YTgviK3fpH4QdIIp9az6WMW03swf5',
+  parseRestKey: 'Ze3FdwvXrb2czZKsHHNnD7KviJGMXpEjg4XorSCv',
   streamName: 'parse-demo'
 };
 
